@@ -10,3 +10,6 @@ build:
 
 push:
 	docker push ${DOCKER_NAMESPACE}/${APPLICATION_NAME}:${DOCKER_TAG}
+
+all:
+	$(MAKE) auth build push

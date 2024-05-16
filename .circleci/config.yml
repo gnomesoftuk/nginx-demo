@@ -20,4 +20,4 @@ jobs:
           docker_layer_caching: true
 
       - run: |
-          make auth build push
+          make all
