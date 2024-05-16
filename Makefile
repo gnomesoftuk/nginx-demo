@@ -6,5 +6,5 @@ build:
 	docker build --tag ${DOCKER_NAMESPACE}/${APPLICATION_NAME}:${DOCKER_TAG} ./nginx -f Dockerfile
 
 push:
-	echo $DOCKER_PASS | docker login -u ${DOCKER_NAMESPACE} --password-stdin
+	echo ${DOCKER_PASS} | docker login -u ${DOCKER_NAMESPACE} --password-stdin
 	docker push ${DOCKER_NAMESPACE}/${APPLICATION_NAME}:${DOCKER_TAG}
