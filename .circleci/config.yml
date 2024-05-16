@@ -20,9 +20,9 @@ jobs:
           name: deploy
           command: make push
 workflows:
-  example:
+  all:
     jobs:
-      - build:
+      - build
       - deploy:
           requires:
             - build
