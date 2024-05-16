@@ -17,4 +17,4 @@ labels:
 # rewrite and check this in to update images
 images:
 - name: gnomesoft/nginx-demo
-  digest: sha256:7b63fd7
+  digest: sha256:6a821e5afe39e737ec09f9a56ca88b81e69528f99eda8f424df4ce6fc490420d
