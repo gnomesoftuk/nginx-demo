@@ -1,6 +1,14 @@
 # CircleCI configuration file
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context:
+            - DockerHub
+
 jobs:
   build:
     docker:
@@ -12,4 +20,4 @@ jobs:
           docker_layer_caching: true
 
       - run: |
-          make build push
+          make auth build push
