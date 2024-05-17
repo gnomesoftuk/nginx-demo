@@ -14,7 +14,7 @@ while [ "${CID}" = "" -a ${SECONDS} -le 30 ]; do
     sleep 1
 done
 
-curl -o - -I  ${TEST_PROTO}://${TEST_HOST}:${TEST_PORT}
+curl -o - -I --retry 5 --retry-delay 1 ${TEST_PROTO}://${TEST_HOST}:${TEST_PORT}
 
 if [ $? -gt 0 ]; then
     echo "Failed to connect to $CONTAINER_NAME container"
