@@ -1,5 +1,4 @@
 #!/bin/bash
-
 CONTAINER_NAME=$1
 
 TEST_PROTO=http
