@@ -22,26 +22,19 @@ workflows:
     
 jobs:
   build:
-    docker:
-      - image: cimg/base:stable
+    machine:
+      image: ubuntu-2204:2022.04.2
     steps:
       - checkout
 
-      - setup_remote_docker:
-          docker_layer_caching: true
-
       - run: |
-          env 
           make build test
 
   release:
-    docker:
-      - image: cimg/base:stable
+    machine:
+      image: ubuntu-2204:2022.04.2
     steps:
       - checkout
-
-      - setup_remote_docker:
-          docker_layer_caching: true
 
       - run: |
           make all
