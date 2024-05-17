@@ -5,12 +5,35 @@ version: 2.1
 workflows:
   main:
     jobs:
-      - build:
+      - release:
           context:
             - DockerHub
-
+          filters:
+            branches:
+              only:
+                - main
+  branch:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - main
+    
 jobs:
   build:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+
+      - setup_remote_docker:
+          docker_layer_caching: true
+
+      - run: |
+          make build
+
+  release:
     docker:
       - image: cimg/base:stable
     steps:
