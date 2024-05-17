@@ -5,7 +5,8 @@ COPY nginx.conf /etc/nginx/sites-available/default
 
 RUN groupadd -g 1001 nginx && \
     useradd -u 1001 -g 1001 -ms /bin/sh nginx \
-    && chown -R nginx:nginx /etc/nginx
+    && chown -R nginx:nginx /etc/nginx \
+    && chown -R nginx:nginx /var/lib/nginx
 
 USER nginx
 
