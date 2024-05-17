@@ -33,6 +33,7 @@ jobs:
   release:
     machine:
       image: default
+    resource_class: small
     steps:
       - checkout
 
