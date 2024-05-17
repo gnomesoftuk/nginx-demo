@@ -1,6 +1,11 @@
 # nginx-demo
 nginx-demo
 
+# how to update
+
+- Make your change
+- Run `make build test`
+- Submit your changes
 
 # demo features
 
