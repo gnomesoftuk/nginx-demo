@@ -1,4 +1,4 @@
-FROM nginx:1.17.6
+FROM nginx:1.25.5
 
 LABEL source=https://github.com/gnomesoftuk/nginx-demo
 LABEL name=nginx-demo
