@@ -1,5 +1,8 @@
 FROM nginx:1.17.6
 
+LABEL source=https://github.com/gnomesoftuk/nginx-demo
+LABEL name=nginx-demo
+
 RUN apt-get -y update
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
