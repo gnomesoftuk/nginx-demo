@@ -23,7 +23,7 @@ workflows:
 jobs:
   build:
     machine:
-      image: ubuntu-2204:2022.04.2
+      image: default
     steps:
       - checkout
 
@@ -32,7 +32,7 @@ jobs:
 
   release:
     machine:
-      image: ubuntu-2204:2022.04.2
+      image: default
     steps:
       - checkout
 
